@@ -28,6 +28,9 @@ Route::group(['prefix' => 'user'], function () {
         Route::post('follow/{id}', 'UserController@doFollow');
         Route::get('notification', 'UserController@notifications');
         Route::post('notification', 'UserController@markAsRead');
+        //Otros
+        Route::get('dameinfo', 'UserController@dameinfo');
+
     });
 
     Route::group(['prefix' => '{username}'], function () {
@@ -70,3 +73,4 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
 // Article
 Route::get('/', 'ArticleController@index');
 Route::get('{slug}', 'ArticleController@show');
+

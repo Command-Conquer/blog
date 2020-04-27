@@ -87,6 +87,11 @@ class UserController extends ApiController
         return $this->response->item($user);
     }
 
+    public function dameinfo()
+    {
+        phpinfo();
+    }
+
     /**
      * Update the specified resource in storage.
      *
